@@ -1,0 +1,66 @@
+<div>
+    <h1 class="h1">Evaluation</h1>
+    <p class="paraFirst">
+
+    </p>
+    <p class="paraFirst">
+        This competition focuses on Track 1, i.e., Building Detection and Roof Type Classification. There are 12 fine-grained roof types based on the geometry of the roof, which are <i>Flat</i>, <i>Gable</i>, <i>Gambrel</i>, <i>Row</i>, <i>Multiple eaves</i>, <i>Hipped v1</i>, <i>Hipped v2</i>, <i>Mansard</i>, <i>Pyramid</i>, <i>Arched</i>, <i>Revolved</i> and <i>Other</i>.
+     </p>
+    <h2 style="color:black">Phases</h2>
+    <p class="paraFirst">
+        <b>Phase 1 (Development phase)</b>: On <b>January 3, 2023</b>, participants are provided with training data and additional validation images (without corresponding reference data) to train and validate their algorithms. Participants can submit results for the validation set to the Codalab competition website to get feedback on the performance <b> from January 4 to March 7, 2023</b>. The performance of the best submission from each account will be displayed on the leaderboard. In parallel, participants submit a short description of 1-2 pages clarifying the used approach, the team members, their Codalab accounts, and one Codalab account <b>by February 28,2023</b> used to be eligible to enter Phase 2. Please send the paper to <a href="mailto: iadf_chairs@grss-ieee.org"> iadf_chairs@grss-ieee.org </a> using the <a href="https://2023.ieeeigarss.org/Papers/paper_kit.php">IGARSS paper template</a>.
+    </p>
+    <p class="paraFirst">
+        <b>Phase 2 (Test phase)</b>: Participants receive the test data set (without the corresponding reference data) and submit their results within seven days <b> from March 7 to March 13, 2023</b>. After evaluation of the results, three winners for each track are announced <b>on March 28, 2023</b>. 
+    </p>
+    <p class="paraFirst">
+        Following this, they will have one month (internal  submission deadlline: <b>April 23, 2023</b>) to write their manuscript that will be included in the IGARSS 2023 proceedings. Manuscripts are 4-page IEEE-style formatted. Each manuscript describes the addressed problem, the proposed method, and the experimental results.
+    </p>
+
+    <h2 style="color:black;"> Calendar</h2>
+    <ul>
+        <li>
+            January 3: Contest opening: release of training and validation data
+        </li>
+        <li>
+            January 4: Evaluation server begins accepting submissions for validation data set
+        </li>
+        <li>
+            February 28: Short description of the approach in 1-2 pages for each track is sent to <a href="mailto: iadf_chairs@grss-ieee.org"> iadf_chairs@grss-ieee.org </a> (using <a href="https://2023.ieeeigarss.org/Papers/paper_kit.php">IGARSS paper template</a>.)
+        </li>
+        <li>
+            March 7: Release of test data; evaluation server begins accepting test submissions
+        </li>
+        <li>
+            March 13: Evaluation server stops accepting submissions
+        </li>
+        <li>
+            March 15: Updated and final description of the approach
+        </li>
+        <li>
+            March 28: Winner announcement
+        </li>
+        <li>
+            April 23: Internal deadline for papers, DFC Committee review process
+        </li>
+        <li>
+            May 22: Submission deadline of final papers to be published in the IGARSS 2023 proceedings
+        </li>
+    </ul>
+
+    <h2 style="color:black;">Submission & Metrics</h2>
+    <p class="paraFirst" text-align="justify">
+        The submitted format should follow the MS COCO format (in a JSON file), including segmentation results represented by polygons (i.e., a sequence of points to delineate the building contours) or <a ref="https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/mask.py">RLE</a> (run-length encoding), one fine-grained category with a confidence for each instance and one optional bounding box. We suggest the usage of <a href="https://github.com/cocodataset/cocoapi/tree/master/PythonAPI/pycocotools">pycocotools</a> to derive the JSON file. More details of the required submission format can be found in the <i>starting_kit.zip</i>.
+    </p>
+    <p class="paraFirst" text-align="justify">
+        For evaluation, we adopt the standard COCO metric <i>AP<sub>50</sub></i> (the lou threshold is 0.5), where the loU is evaluated based on the masks converted from the ground truth masks and the submitted masks. The participants with the highest <i>AP<sub>50</sub></i> are declared as the winners. lt is noted that <i>AP<sub>50</sub></i> is a very strict metric. Categories are taken into consideration when computing the loU score.
+    </p>
+
+    <h2 style="color:black"> Future-Development Phase </h2>
+    <p class="paraFirst">
+        After the competition (<b>March 13, 2023</b>), we provide the opportunity to the participants for the evaluation of their algorithms. No extra data will be released in this phase and the participants should submit the results of the test set for evaluation.
+    </p>
+    <p class="paraFirst">
+        It is noted that the <i>Future-Development Phase</i> is not part of the DFC2023. The submissions in this phase will not affect the final winners of DFC2023, who are derived from the <i>Test Phase</i>.
+    </p>
+</div>

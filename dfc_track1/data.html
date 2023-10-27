@@ -1,0 +1,32 @@
+<div>
+    <h1 class="h1">Data</h1>
+
+    <h2 style="color:black"> Data Source</h2>
+    <p class="paraFirst">
+        Images of this track are collected from the SuperView-1 (or “GaoJing” in Chinese), Gaofen-2 and Gaofen-3 satellites, with spatial resolutions of 0.5 m, 0.8 m, and 1m, respectively. All optical images of DFC23 data are from Gaofen-2 (0.8m) and SuperView (0.5m) satellites. And finely-registered SAR images are from Gaofen-3 satellite (1m). All images are resampled to the same resolution of 0.5m. Data was collected from seventeen cities on six continents (except Antarctica) to provide a large and representative data set of high diversity regarding landforms, architecture, and building types.
+    </p>
+
+    <h2 style="color:black"> Partition </h2>
+    <p class="paraFirst">
+        The images are cropped into tiles of 512x512 pixels and are assigned to the training, validation and test set. There are 3720 tiles in the training set, 1549 tiles in the validation set, 1541 tiles in the test set. The participants can access the training set (including the optical images, the corresponding SAR images and the reference) and the validation set (without reference) in the development phase. In the test phase, the test set (without reference) will be released.
+    </p>
+
+    <h2 style="color:black"> Download </h2>
+    <p class="paraFirst">
+        All of the competition data is stored on <a href="https://ieee-dataport.org/competitions/2023-ieee-grss-data-fusion-contest-large-scale-fine-grained-building-classification">IEEE DataPort</a> and starting kits can be accessed in the <a href="https://codalab.lisn.upsaclay.fr/competitions/8987#participate-get_starting_kit"> Files pages</a>.
+    </p>
+    
+
+    <h2 style="color:black"> Baseline</h2>
+    <p class="paraFirst">
+        A baseline that shows how to use the DFC23 data to train instance segmentation algorithms, make submissions, etc can be found <a href="https://github.com/AICyberTeam/DFC2023-baseline">here</a>.
+
+    </p>
+
+    <p class="paraFirst">
+        This baseline uses Pytorch and MMDetection toolbox to train a Mask R-CNN with a ResNet-50 backbone and Feature Pyramid Network (FPN) to perform instance segmentation on the DFC23 dataset. Extracted individual building masks with classification prediction are formatted into json file and then zipped to be submitted. 
+        <!-- This Mask R-CNN baseline trained on the train set results in a 25.0 AP on the validation set.  -->
+        There are a lot of connected adjacent building blocks in this dataset, so participants adopting algorithms focusing on individual instance segmentation should seek improvement upon this result.
+    </p>
+    
+</div>

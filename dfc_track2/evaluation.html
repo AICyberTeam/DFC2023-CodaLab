@@ -1,0 +1,64 @@
+<div>
+    <h1 class="h1">Evaluation</h1>
+    <p class="paraFirst">
+
+    </p>
+    <p class="paraFirst">
+        This competition focuses on Track 2, i.e., Multi-Task Learning of Joint Building Extraction and Height Estimation. The building roof type classification is not required on this track.
+     </p>
+    <h2 style="color:black">Phases</h2>
+    <p class="paraFirst">
+        <b>Phase 1 (Development phase)</b>: On <b>January 3, 2023</b>, participants are provided with training data and additional validation images (without corresponding reference data) to train and validate their algorithms. Participants can submit results for the validation set to the Codalab competition website to get feedback on the performance <b> from January 4 to March 7, 2023</b>. The performance of the best submission from each account will be displayed on the leaderboard. In parallel, participants submit a short description of 1-2 pages clarifying the used approach, the team members, their Codalab accounts, and one Codalab account <b>by February 28,2023</b> used to be eligible to enter Phase 2. Please send the paper to <a href="mailto: iadf_chairs@grss-ieee.org"> iadf_chairs@grss-ieee.org </a> using the <a href="https://2023.ieeeigarss.org/Papers/paper_kit.php">IGARSS paper template</a>.
+    </p>
+    <p class="paraFirst">
+        <b>Phase 2 (Test phase)</b>: Participants receive the test data set (without the corresponding reference data) and submit their results within seven days <b> from March 7 to March 13, 2023</b>. After evaluation of the results, three winners for each track are announced <b>on March 28, 2023</b>. 
+    </p>
+    <p class="paraFirst">
+        Following this, they will have one month (internal  submission deadlline: <b>April 23, 2023</b>) to write their manuscript that will be included in the IGARSS 2023 proceedings. Manuscripts are 4-page IEEE-style formatted. Each manuscript describes the addressed problem, the proposed method, and the experimental results.
+    </p>
+
+    <h2 style="color:black;"> Calendar</h2>
+    <ul>
+        <li>
+            January 3: Contest opening: release of training and validation data
+        </li>
+        <li>
+            January 4: Evaluation server begins accepting submissions for validation data set
+        </li>
+        <li>
+            February 28: Short description of the approach in 1-2 pages for each track is sent to <a href="mailto: iadf_chairs@grss-ieee.org"> iadf_chairs@grss-ieee.org </a> (using <a href="https://2023.ieeeigarss.org/Papers/paper_kit.php">IGARSS paper template</a>.)
+        </li>
+        <li>
+            March 7: Release of test data; evaluation server begins accepting test submissions
+        </li>
+        <li>
+            March 13: Evaluation server stops accepting submissions
+        </li>
+        <li>
+            March 15: Updated and final description of the approach
+        </li>
+        <li>
+            March 28: Winner announcement
+        </li>
+        <li>
+            April 23: Internal deadline for papers, DFC Committee review process
+        </li>
+        <li>
+            May 22: Submission deadline of final papers to be published in the IGARSS 2023 proceedings
+        </li>
+    </ul>
+    
+    <h2 style="color:black;">Submission & Metrics</h2>
+    <p class="paraFirst" text-align="justify">The submitted results should include two parts. The first part is a building extraction result, which is the same as the previous track with only one exception that the category is not taken into consideration in this track. The second part is a pixel-wise height estimation result, which is a map with the same resolution as the input. The second part should be a <i>tif</i> file with the same name as the corresponding optical image. More details of the required submission format can be found in the <i>starting_kit.zip</i>
+    </p>
+    <p class="paraFirst" text-align="justify">For evaluation, the metric of the building extraction is the same as Track 1 (categories are not taken into consideration) and the metric of height estimation is threshold accuracy &delta;<sub>1</sub>=<sup>N<sub>t</sub></sup>&frasl;<sub>N<sub>total</sub></sub>, where N<sub>total</sub> is the total number of pixels and N<sub>t</sub> is the number of pixels that meet <i>max(<sup>y</sup>&frasl;<sub>&ycirc;</sub>, <sup>&ycirc;</sup>&frasl;<sub>y</sub>)<1.25</i>, where <i>y</i> is the reference height and <i>&ycirc;</i> is the predicted height. The final metric is the average of the two metrics, i.e., (<i>AP<sub>50</sub></i> + &delta;<sub>1</sub>)/2.
+    </p>
+
+    <h2 style="color:black"> Future-Development Phase </h2>
+    <p class="paraFirst">
+        After the competition (<b>March 13, 2023</b>), we provide the opportunity to the participants for the evaluation of their algorithms. No extra data will be released in this phase and the participants should submit the results of the test set for evaluation.
+    </p>
+    <p class="paraFirst">
+        It is noted that the <i>Future-Development Phase</i> is not part of the DFC2023. The submissions in this phase will not affect the final winners of DFC2023, who are derived from the <i>Test Phase</i>.
+    </p>
+</div>

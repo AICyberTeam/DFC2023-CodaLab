@@ -1,0 +1,2 @@
+command: python $program/metric.py $input $output
+description: Example competition evaluation program.

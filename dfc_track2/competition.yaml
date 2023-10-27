@@ -1,0 +1,82 @@
+title: 2023 IEEE GRSS Data Fusion Contest Track 2 
+description: Multi-Task Learning of Joint Building Extraction and Height Estimation
+image: logo.jpg
+has_registration: True                 # We do not check participants, registration is free
+force_submission_to_leaderboard: True   # If false, participants must submit manually, do not change
+disallow_leaderboard_modifying: True    # If true, submissions cannot be changed
+enable_detailed_results: False           # True if html file written
+enable_forum: True                      # Forum active
+admin_names: kaycharm                # Admin people that can help you will have access to your competition 
+competition_docker_image: raykkid/dfc2023metric:v2
+end_date: null
+
+html:
+  data: data.html
+  evaluation: evaluation.html
+  overview: overview.html
+  terms: terms.html
+
+phases:
+  1:
+    phasenumber: 1
+    label: Development Phase
+    description: 'Participants are provided with training data and additional validation images (without corresponding reference data) to train and validate their algorithms.'
+    start_date: 2023-01-04 00:00:00+12:00
+    is_scoring_only: True    
+    max_submissions_per_day: 5
+    force_best_submission_to_leaderboard: True      # Participants will see their best submission on the leaderboard
+    # public_data: track2_phase1_train_val_data.zip                     # Same as input data (available for download by the participants)
+    starting_kit: starting_kit.zip                  # The starting kit you prepared
+    scoring_program: track2_phase1_scoring_program.zip            # The scoring program (the same for both phases)
+    reference_data: track2_phase1_val_gt.zip                    # The truth values (solution) for phase 1 used by the scoring program
+    color: green   
+  2:
+    phasenumber: 2
+    label: Test Phase
+    description: 'Participants receive the test data set (without the corresponding reference data) and submit their results within seven days.'
+    start_date: 2023-03-07 00:00:00+12:00
+    is_scoring_only: True 
+    max_submissions_per_day: 5
+    force_best_submission_to_leaderboard: True 
+    # public_data: track2_phase2_test_data.zip
+    scoring_program: track2_phase2_scoring_program.zip            # The scoring program (the same for both phases)
+    reference_data: track2_phase2_test_gt.zip                   # The truth values (solution) for phase 1 used by the scoring program
+    color: purple
+  3:
+    phasenumber: 3
+    label: Future-development Phase
+    description: 'Subsequent participants can submit results to evaluate their algorithms, but will not be awarded prizes or certificates.'
+    start_date: 2023-03-14 00:00:00+12:00
+    is_scoring_only: True 
+    max_submissions_per_day: 2
+    force_best_submission_to_leaderboard: True
+    auto_migration: True 
+    # public_data: track2_phase1_train_val_data.zip
+    scoring_program: track2_phase2_scoring_program.zip            
+    reference_data: track2_phase2_test_gt.zip 
+    color: orange   
+
+leaderboard:
+    leaderboards:
+        Results: &RESULTS
+            label: RESULTS
+            rank: 1
+    columns:
+        Score:
+            leaderboard: *RESULTS
+            label: Score
+            numeric_format: 6
+            rank: 1
+            sorting: desc
+        AP_50:
+            leaderboard: *RESULTS
+            label: AP_50
+            numeric_format: 6
+            rank: 2
+            sorting: desc  
+        Delta_1:
+            leaderboard: *RESULTS
+            label: Delta_1
+            numeric_format: 6
+            rank: 3
+            sorting: desc

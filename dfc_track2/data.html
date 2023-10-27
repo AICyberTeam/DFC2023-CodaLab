@@ -1,0 +1,32 @@
+<div>
+    <h1 class="h1">Data</h1>
+
+    <h2 style="color:black"> Data Source</h2>
+    <p class="paraFirst">
+        Images of this track are collected from the SuperView-1 (or “GaoJing” in Chinese), Gaofen-2 and Gaofen-3 satellites, with spatial resolutions of 0.5 m, 0.8 m, and 1m, respectively. All optical images of DFC23 data are from Gaofen-2 (0.8m) and SuperView (0.5m) satellites. And finely-registered SAR images are from Gaofen-3 satellite (1m). Normalized Digital Surface Models (nDSMs) provided for reference in Track 2  are produced from stereo images captured by Gaofen-7 and WorldView with a ground sampling distance (GSD) of roughly 2 m. All images are resampled to the same resolution of 0.5m. Data was collected from seventeen cities on six continents (except Antarctica) to provide a large and representative data set of high diversity regarding landforms, architecture, and building types.
+    </p>
+
+    <h2 style="color:black"> Partition </h2>
+    <p class="paraFirst">
+        The images are cropped into tiles of 512x512 pixels and are assigned to the training, validation and test set. There are 1773 tiles in the training set, 579 tiles in the validation set, 605 tiles in the test set. The participants can access the training set (including the optical images, the corresponding SAR images and the reference) and the validation set (without reference) in the development phase. In the test phase, the test set (without reference) will be released.
+    </p>
+
+    <h2 style="color:black"> Download </h2>
+    <p class="paraFirst">
+        All of the competition data is stored on <a>IEEE DataPort</a> and can be accessed in the <b>Files</b> pages.
+    </p>
+    
+
+    <h2 style="color:black"> Baseline</h2>
+    <p class="paraFirst">
+        A baseline that shows how to use the DFC23 data to train instance segmentation and height estimation algorithms, make submissions, etc can be found <a href="https://github.com/AICyberTeam/DFC2023-baseline">here</a>.
+
+    </p>
+
+    <p class="paraFirst">
+        The method for the building extraction task is the same as Track 1. For the height estimation task, we use the Pytorch toolbox to train a network adapted from PSPNet with a ResNet-50 backbone to perform building height prediction on the DFC23 dataset. The prediction results of each image are uniformly expressed as <i>tif</i> files, and then placed in a folder named HeightResult. 
+        <!-- This height prediction network baseline trained on the training set yields \delta_1=0.523 on the validation set.  -->
+        It is noted that the submitted prediction results of building heights must be real height values instead of [0, 1] normalized values.
+    </p>
+    
+</div>
